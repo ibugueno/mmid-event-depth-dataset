@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Multi-Modal Indoor Dataset for Event-based Monocular Depth Estimation by Mobile Robots">
+  <meta name="keywords" content="Dataset, Multi-Modal, Event-based Cameras, Depth Estimation, Sensor Fusion">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multi-Modal Indoor Dataset for Event-based Monocular Depth Estimation by Mobile Robots</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://ibugueno.github.io/mmid-event-depth-dataset/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Multi-Modal Indoor Dataset for Event-based Monocular Depth Estimation by Mobile Robots</h1>
+          <div class="is-size-5 publication-authors">
+
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=R7t-SFYAAAAJ">Ignacio Bugueno-Cordova</a><sup>1,3,4</sup>,</span>
+            </span>
+
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=8_2ww6cAAAAJ">Luna Gava</a><sup>2</sup>,</span>
+            </span>
+
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=U0XHBs8AAAAJ">Javier Ruiz-del-Solar</a><sup>3</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://rodrigo.verschae.org/">Rodrigo Verschae</a><sup>4</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=SeQvYQ0AAAAJ">Nicolas Navarro-Guerrero</a><sup>1</sup>,</span>
+            </span>
+
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>L3S Research Center, Leibniz Universität Hannover, Hanover, Germany,</span>
+            <span class="author-block"><sup>2</sup>Event-Driven Perception for Robotics, Istituto Italiano di Tecnologia, Genova, Italy</span>
+            <span class="author-block"><sup>3</sup>AMTC and Department of Electrical Engineering, Universidad de Chile, Chile,</span>
+            <span class="author-block"><sup>4</sup>Institute of Engineering Sciences, Universidad de O'Higgins, Chile</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data samples</span>
+                  </a>
+              </span>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    
+    <!-- Paper video. -->
+    
+    <!--
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/dF8_ektJ8Nk?si=JMIXD1gNF_uP9UMx?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    -->
+
+    <!--/ Paper video. -->
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          This article introduces a multi-modal indoor dataset for event-based monocular depth estimation by mobile robots. The dataset was recorded on a humanoid platform and includes synchronized RGB, depth, event streams, and IMU data from Intel RealSense D435i, DAVIS346, and Prophesee EVK4 sensors. To provide a baseline, we implement a CycleGAN model that learns bidirectional mappings between the event-representation and the depth domain. We evaluate multiple state-of-the-art representations showing that event-based inputs could outperform frame-only inputs across accuracy, perceptual quality, and geometric reliability. The dataset and baseline together provide a reproducible testbed for event-based perception in indoor mobile robotics.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="rows">
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Dataset description</h2>
+
+          <div class="content has-text-justified">
+
+            <p>
+              We present a multi-modal indoor dataset for mobile robots, including synchronized RGB, depth, event streams, and IMU data. It addresses the challenges of event-based monocular depth estimation and other tasks in realistic indoor environments.
+            </p>
+          </div>
+
+          <img src="static/figures/mmid-event-depth_dataset.png" class="" alt="" />
+          <h2 class="subtitle has-text-centered">
+            <span class="dnerf">Figure 1 - Multi-Modal Indoor Dataset for Event-based Monocular Depth Estimation by Mobile Robots. Example of the dataset: RGB frames, Accumulative Polarity Events, BEHI, SAE, Tencode, EROS, and depth ground truth samples. 
+          </h2>
+
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Dataset baselines</h2>
+
+          <div class="content has-text-justified">
+
+            <p>
+              The Cycle Generative Adversarial Network (CycleGAN) is adapted to learn a bidirectional mapping between event-based representations H and monocular depth images Z. This approach uses two generators along with discriminators. The adversarial objective enforces realism in each target domain. Meanwhile, cycle-consistency and identity losses preserve geometric and structural information for robust depth estimation in indoor navigation scenarios.
+            </p>
+          </div>
+
+          <img src="static/figures/cyclegan_arch.png" class="" alt="" />
+          <h2 class="subtitle has-text-centered">
+            <span class="dnerf">Figure 2 - Suggested CycleGAN architecture for event-based monocular depth estimation baseline. Event streams are preprocessed into dense representations, which are then translated into depth images and back through paired generators. Discriminators enforce realism in each domain using a least-squares loss, while cycle consistency enables reconstruction across event and depth domains. 
+          </h2>
+
+
+
+          <div class="content has-text-justified">
+
+            <p>
+              The CycleGAN baseline was trained for 100 epochs with a batch size of 8 and the Adam optimizer. Table 1 summarizes the most relevant hyperparameters.
+            </p>
+          </div>
+
+
+          <!-- Side-by-side tables -->
+          <div style="display: flex; justify-content: space-around; margin-top: 20px;">
+            <table border="1" style="font-family: 'Times New Roman', Times, serif; font-size: 14px; color: #000000; width: 45%; border-collapse: collapse;">
+              <caption>Training hyperparameters and loss configuration.</caption>
+              <thead>
+                <tr>
+                  <th>Parameter</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Epochs</td>
+                  <td>100</td>
+                </tr>
+                <tr>
+                  <td>Batch size</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>Learning rate (G)</td>
+                  <td>2 &times; 10<sup>&minus;4</sup></td>
+                </tr>
+                <tr>
+                  <td>Learning rate (D)</td>
+                  <td>2 &times; 10<sup>&minus;4</sup></td>
+                </tr>
+                <tr>
+                  <td>&beta;<sub>1</sub></td>
+                  <td>0.5</td>
+                </tr>
+                <tr>
+                  <td>&beta;<sub>2</sub></td>
+                  <td>0.999</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{Bugueno2025MMIDEventDepth,
+  author="Bugueno-Cordova, Ignacio
+  and Luna, Gava
+  and Verschae, Rodrigo
+  and Ruiz-del-Solar, Javier
+  and Navarro-Guerrero, Nicolas",
+  title="Human-Robot Navigation using Event-based Cameras and Reinforcement Learning",
+  year="2025",
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <!--
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
